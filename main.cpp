@@ -4,23 +4,23 @@
 #include "RNG.h"
 #include "CHRONO.h"
 
-// Helper function to populate with random data
+// populate with random data
 void populateRandomData(BST &bst, LinkedList &ll, int count, int min, int max) {
     RNG rng(min, max);
     std::vector<int> randomValues = rng.generateRandomNumbers(count);
     for (int val : randomValues) {
-        bst.insert(val);    // Add to BST
-        ll.append(val);     // Add to LL (using append as we discussed)
+        bst.insert(val); 
+        ll.append(val);     
     }
 }
 
-// Helper function to populate with sequential data
+// populate with sequential data
 void populateSequentialData(BST &bst, LinkedList &ll, int start, int end, bool reverse) {
-    RNG rng(0, 0);  // min and max are not needed for sequential
+    RNG rng(0, 0);
     std::vector<int> sequentialValues = rng.generateSequentialNumbers(start, end, reverse);
     for (int val : sequentialValues) {
-        bst.insert(val);    // Add to BST
-        ll.append(val);     // Add to LL
+        bst.insert(val);   
+        ll.append(val);    
     }
 }
 
@@ -32,7 +32,8 @@ void measureSearch(BST &bst, LinkedList &ll, int searchValue, const std::string&
     bool bstFound = bst.search(searchValue);
     double BSTtime = chrono.stop();
 
-    std::cout << datasetName << " - BST search for value " << searchValue << " " << std::boolalpha << bstFound << std::endl;
+    std::cout << datasetName << " - BST search for value " << searchValue << " " << std::endl;
+    std::cout << "Found -> " << std::boolalpha << bstFound << std::endl;
     std::cout << "time = " << BSTtime << " ms\n";
 
     // Search in Linked List
@@ -40,8 +41,10 @@ void measureSearch(BST &bst, LinkedList &ll, int searchValue, const std::string&
     bool llFound = ll.search(searchValue);
     double LLtime = chrono.stop();
 
-    std::cout << datasetName << " - LL search for value " << searchValue << " " << std::boolalpha << llFound << std::endl;
+    std::cout << datasetName << " - LL search for value " << searchValue << std::endl;
+    std::cout << "Found -> " << std::boolalpha << llFound << std::endl;
     std::cout << "time = " << LLtime << " ms\n";
+    std::cout << std::endl;
 }
 
 int main() {

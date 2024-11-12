@@ -64,6 +64,9 @@ bool LinkedList::prepend(int val) {
 
     tmp->next = head;
     head = tmp;
+
+    return true;
+
 }
 
 
@@ -98,6 +101,8 @@ bool LinkedList::remove(int val) {
         prv = tmp;
         tmp = tmp->next;
     }
+
+    return false;
 }
     
 void LinkedList::display(std::ostream& os) {
@@ -107,6 +112,7 @@ void LinkedList::display(std::ostream& os) {
         os << tmp->data << ", ";
         tmp = tmp->next;
     }
+
 }
 
 
