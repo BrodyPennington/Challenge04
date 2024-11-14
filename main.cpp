@@ -6,7 +6,7 @@
 
 
 /*
-    This code will break on shit operating systems (windows) for some reason. 
+    This code will break on shit operating systems (windows). 
     I can optimise it if needed for the sake of my grade.
     Can also provide video of testing if helps.
 */
