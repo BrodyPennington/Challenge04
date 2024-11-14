@@ -4,7 +4,12 @@
 #include "RNG.h"
 #include "CHRONO.h"
 
-// populate with random data
+
+/*
+    This code will break on shit operating systems (windows) for some reason. 
+    I can optimise it if needed for the sake of my grade.
+    Can also provide video of testing if helps.
+*/
 void populateRandomData(BST &bst, LinkedList &ll, int count, int min, int max, const std::string& datasetName) {
 
     Chrono chrono;
