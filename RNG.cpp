@@ -11,7 +11,7 @@ std::vector<int> RNG::generateRandomNumbersBST(int count) {
     std::vector<int> numbers(count);
 
     for (int &num : numbers) {
-        num = dis(gen);  // Generate a random number in range
+        num = dis(gen);
     }
 
     return numbers;
@@ -21,7 +21,7 @@ std::vector<int> RNG::generateRandomNumbersLL(int count) {
     std::vector<int> numbers(count);
 
     for (int &num : numbers) {
-        num = dis(gen);  // Generate a random number in range
+        num = dis(gen);
     }
 
     return numbers;
@@ -31,7 +31,7 @@ std::vector<int> RNG::generateRandomNumbers(int count) {
     std::vector<int> numbers(count);
 
     for (int &num : numbers) {
-        num = dis(gen);  // Generate a random number in range
+        num = dis(gen);
     }
 
     return numbers;
@@ -39,7 +39,7 @@ std::vector<int> RNG::generateRandomNumbers(int count) {
 
 std::vector<int> RNG::generateSequentialNumbersBST(int start, int end, bool reverse) {
     std::vector<int> numbers;
-    for (int i = start; i <= end; ++i) {
+    for (int i = start; i <= end; i++) {
         numbers.push_back(i);
     }
 
@@ -52,7 +52,7 @@ std::vector<int> RNG::generateSequentialNumbersBST(int start, int end, bool reve
 
 std::vector<int> RNG::generateSequentialNumbersLL(int start, int end, bool reverse) {
     std::vector<int> numbers;
-    for (int i = start; i <= end; ++i) {
+    for (int i = start; i <= end; i++) {
         numbers.push_back(i);
     }
 
